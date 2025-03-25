@@ -1,0 +1,13 @@
+#include "main.h"
+#include <unistd.h>
+
+/**
+ * print_char - Prints a single character
+ * @c: Character to print
+ * Return: 1 (Number of characters printed)
+ */
+
+int print_char(char c)
+{
+    return (write(1, &c, 1));
+}
