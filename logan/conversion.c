@@ -10,24 +10,24 @@
  */
 int _printf(const char *format, ...)
 {
-	int count = 0; /* inittiales count*/
-	const char *ptr; /* ptr ce trouve dans format */
+	int count = 0; // iinialise count
+	const char *ptr; // ptr is the character string
 
-	for (ptr = format; *ptr != '\0'; ptr++)
+	for (ptr = format; *ptr != '\0'; ptr++) // initializes the character string
 	{
-			if (*ptr == '%' && *(ptr + 1) == '%')
+			if (*ptr == '%' && *(ptr + 1) == '%') //displays character 1 if % or 2 if %%
 			{
 
-					write(1, "%", 1);
+					write(1, "%", 1); //print the characters
 					count++;
 					ptr++;
 			}
 			else
 			{
-					write(1, ptr, 1);
+					write(1, ptr, 1); //print a normal character
 
 					count++;
 			}
 	}
-			return (count);
+			return (count); //returns the value
 }
