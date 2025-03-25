@@ -20,15 +20,17 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 
 	if (format == NULL)
-		return (-1);
+		return (-1); // check if format isn't NULL, if it is return -1 as an error
 
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%') // if function to check the first character of format
 		{
 			format++;
-			if (*format == 's')
+
+			if (*format == 's') // if function to check the second character of format
 				i += print_string(va_arg(args, char *));
+			// below that line call your function with else if
 		}
 		else
 			i += _putchar(*format);
