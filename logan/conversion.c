@@ -18,13 +18,13 @@ int _printf(const char *format, ...)
 			if (*ptr == '%' && *(ptr + 1) == '%') //displays character 1 if % or 2 if %%
 			{
 
-					write(1, "%", 1); //print the characters
+					write(1, "%", 1); //discplay the characters
 					count++;
 					ptr++;
 			}
 			else
 			{
-					write(1, ptr, 1); //print a normal character
+					write(1, ptr, 1); //displays a normal character
 
 					count++;
 			}
