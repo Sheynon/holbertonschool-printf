@@ -31,6 +31,8 @@ int _printf(const char *format, ...)
 				i += print_string(va_arg(args, char *));
 			else if (*format == '%')
 				i += print_percent();
+			else if (*format == 'c')
+				i += print_char(va_arg(args, int));
 		}
 		else
 			i += _putchar(*format);
