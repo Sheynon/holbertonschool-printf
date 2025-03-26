@@ -3,9 +3,9 @@
 #include <unistd.h>
 
 /**
- * _printf - Custom printf function that handles %c, %s, and %%
- * @format: The format string
- * Return: Number of characters printed
+ * _printf - Produces output according to a format (handles %c).
+ * @format: The format string containing directives.
+ * Return: The number of characters printed (excluding null byte).
  */
 int _printf(const char *format, ...)
 {
@@ -21,17 +21,17 @@ int _printf(const char *format, ...)
     {
         if (*format == '%' && (*(format + 1) == 'c'))
         {
-            char c = va_arg(args, int);
-            count += write(1, &c, 1);
-            format += 2;
+            format++;
+            count += print_char(va_arg(args, int));
         }
         else
         {
-            count += write(1, format, 1);
-            format++;
+            count += _putchar(*format);
         }
+        format++;
     }
 
     va_end(args);
     return (count);
 }
+
