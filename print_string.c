@@ -14,14 +14,12 @@ int print_string(char *str)
 
 	if (str == NULL)
 		str = "(null)";
-	// check if the var str is NULL, if it is give it a value "(null)"
 
 	while (*str)
 	{
 		i += _putchar(*str);
 		str++;
 	}
-	// loop while to give to i the value of str
 
 	return (i);
 }
