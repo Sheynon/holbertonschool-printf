@@ -2,7 +2,6 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <string.h>
-#include <unistd.h>
 
 /**
  * _printf - Custom Printf function
@@ -20,17 +19,18 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 
 	if (format == NULL)
-		return (-1); // check if format isn't NULL, if it is return -1 as an error
+		return (-1);
 
 	while (*format)
 	{
-		if (*format == '%') // if function to check the first character of format
+		if (*format == '%')
 		{
 			format++;
 
-			if (*format == 's') // if function to check the second character of format
+			if (*format == 's')
 				i += print_string(va_arg(args, char *));
-			// below that line call your function with else if
+			else if (*format == '%')
+				i += print_percent();
 		}
 		else
 			i += _putchar(*format);
