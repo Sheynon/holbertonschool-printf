@@ -1,0 +1,51 @@
+./" man page for printf
+.th pritnf 24 march 2025 version 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0
+.sh the progarme printf 
+print of the character and string
+name of the comande 
+printf
+description
+the printf command prints character and strings with options and functions that will be developed in the following line
+
+Name options
+%s
+%c
+%i
+%d
+%%
+
+Use option
+
+%s: use a function to print a string
+%c: use a function to print a character
+%i: use a function to print a numbers
+%d: use a function to print a numbers
+%%: use a function to print a character %
+
+Name function
+printf
+putchar
+print_string
+print_percent
+print_char
+print_int
+
+Use fuctions
+printf: fuction is a custom inplementation of printf
+putchar: writes the character 
+print_string: fuction to print a string 
+print_percent: fuction that print a %
+print_char: print à character
+print_int: prints an integer using _putchar
+
+Name blibliotèque
+main.h
+unistd.h
+stddef.h
+stdarg.h
+
+Use blibliotèque
+main.h: we find the protoyupes of the functions used
+unistd.h: it is used for write in the putchar fuction
+stddef.h: it is used for NULL in the print_string and printf
+stdarg.h  it is used for NULL in the print_string and printf
