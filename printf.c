@@ -33,8 +33,8 @@ int _printf(const char *format, ...)
 				i += print_percent();
 			else if (*format == 'c')
 				i += print_char(va_arg(args, int));
-			else if (format == NULL)
-				return (*format);
+			else if (*format == '\0')
+				return (-1);
 		}
 		else
 			i += _putchar(*format);
