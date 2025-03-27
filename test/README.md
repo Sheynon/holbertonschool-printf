@@ -20,6 +20,10 @@ This project is a custom implementation of the C standard `printf` function. It 
 - **Function:** `print_percent`
 - **Description:** Handles the `%%` specifier by printing a literal `%` character.
 
+### `print_int.c`
+- **Function:** `print_int`
+- **Description:** Handles the `%d` and `%i` specifiers by printing integers.
+
 ### `main.h`
 - **Description:** Header file containing all function prototypes and necessary includes.
 
