@@ -35,11 +35,8 @@ int _printf(const char *format, ...)
 				i += print_char(va_arg(args, int));
 			else if (*format == '\0')
 				return (-1);
-			else
-			{
-				i += _putchar('%');
-				i += _putchar(*format);
-			}
+			i += _putchar('%');
+			i += _putchar(*format);
 		}
 		else
 			i += _putchar(*format);
