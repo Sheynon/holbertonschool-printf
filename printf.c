@@ -27,16 +27,19 @@ int _printf(const char *format, ...)
 		{
 			format++;
 
-			if (*format == 's')
-				i += print_string(va_arg(args, char *));
+			if (*format == '\0')
+				return (-1);
 			else if (*format == '%')
 				i += print_percent();
 			else if (*format == 'c')
 				i += print_char(va_arg(args, int));
-			else if (*format == '\0')
-				return (-1);
-			i += _putchar('%');
-			i += _putchar(*format);
+			else if (*format == 's')
+				i += print_string(va_arg(args, char *));
+			else
+			{
+				i += _putchar('%');
+				i += _putchar(*format);
+			}
 		}
 		else
 			i += _putchar(*format);
