@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * print_percent - Function that outputs a formatted string,
- *           handling the %% specifier.
+ * print_percent - Function that print a '%' character
  *
  * Return: Return '%'
  */
