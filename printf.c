@@ -35,6 +35,8 @@ int _printf(const char *format, ...)
 				i += print_char(va_arg(args, int));
 			else if (*format == 's')
 				i += print_string(va_arg(args, char *));
+			else if (*format == 'd' || *format == 'i')
+				i += print_int(va_arg(args, int));
 			else
 			{
 				i += _putchar('%');
