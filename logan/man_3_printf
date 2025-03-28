@@ -1,11 +1,12 @@
-./" man page for printf
-.th pritnf 24 march 2025 version 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0
-.sh the progarme printf 
-print of the character and string
-name of the comande 
+Manpage for printf
+printf 1 "24march 20025" "version 1.0 final "user command
+
+
+Name commande
 printf
-description
-the printf command prints character and strings with options and functions that will be developed in the following line
+
+use commande
+printf: The printf command allows displaying characters, strings, and both negative and positive numbers
 
 Name options
 %s
@@ -18,9 +19,16 @@ Use option
 
 %s: use a function to print a string
 %c: use a function to print a character
+%%: use a function to print a character
 %i: use a function to print a numbers
 %d: use a function to print a numbers
-%%: use a function to print a character %
+
+explanple option
+%s: ("hello, %s!\n", "world");
+%c: ("the first letter is: %c\n", 'a')
+%%: ("The tax is 20%%.\n");
+%i: ("The number is: %i\n", 42);
+%d: ("The number is: %i\n", 42);
 
 Name function
 printf
@@ -48,4 +56,4 @@ Use blibliotèque
 main.h: we find the protoyupes of the functions used
 unistd.h: it is used for write in the putchar fuction
 stddef.h: it is used for NULL in the print_string and printf
-stdarg.h  it is used for NULL in the print_string and printf
+stdarg.h: it is used for NULL in the print_string and printf
