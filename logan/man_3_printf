@@ -1,59 +1,73 @@
-Manpage for printf
-printf 1 "24march 20025" "version 1.0 final "user command
+PRINTF(1)                   User Commands                  PRINTF(1)
 
+NAME
+       printf - command to format and display characters, strings, 
+       and numbers (both negative and positive)
 
-Name commande
-printf
+SYNOPSIS
+       printf FORMAT [ARGUMENTS...]
 
-use commande
-printf: The printf command allows displaying characters, strings, and both negative and positive numbers
+DESCRIPTION
+       The `printf` command is used to display formatted output. 
+       It allows the display of characters, strings, and both 
+       positive and negative numbers based on the specified format.
 
-Name options
-%s
-%c
-%i
-%d
-%%
+OPTIONS
+       %s    Prints a string.
+       %c    Prints a character.
+       %%    Prints a literal '%' character.
+       %i    Prints an integer (similar to %d).
+       %d    Prints a decimal (base 10) integer.
 
-Use option
+FUNCTIONS
+       printf
+           Custom implementation of the printf function.
 
-%s: use a function to print a string
-%c: use a function to print a character
-%%: use a function to print a character
-%i: use a function to print a numbers
-%d: use a function to print a numbers
+       putchar
+           Writes a single character to the standard output.
 
-explanple option
-%s: ("hello, %s!\n", "world");
-%c: ("the first letter is: %c\n", 'a')
-%%: ("The tax is 20%%.\n");
-%i: ("The number is: %i\n", 42);
-%d: ("The number is: %i\n", 42);
+       print_string
+           Function used to print a string.
 
-Name function
-printf
-putchar
-print_string
-print_percent
-print_char
-print_int
+       print_percent
+           Function used to print the '%' character.
 
-Use fuctions
-printf: fuction is a custom inplementation of printf
-putchar: writes the character 
-print_string: fuction to print a string 
-print_percent: fuction that print a %
-print_char: print à character
-print_int: prints an integer using _putchar
+       print_char
+           Function used to print a character.
 
-Name blibliotèque
-main.h
-unistd.h
-stddef.h
-stdarg.h
+       print_int
+           Function used to print an integer by calling `_putchar`.
 
-Use blibliotèque
-main.h: we find the protoyupes of the functions used
-unistd.h: it is used for write in the putchar fuction
-stddef.h: it is used for NULL in the print_string and printf
-stdarg.h: it is used for NULL in the print_string and printf
+LIBRARIES
+       main.h
+           Contains prototypes for the functions used.
+
+       unistd.h
+           Provides the `write` system call, used in `putchar`.
+
+       stddef.h
+           Defines `NULL`, used in `print_string` and `printf`.
+
+       stdarg.h
+           Used for handling variable argument lists in `printf`.
+
+EXAMPLES
+       1. Print a string:
+          $ printf "Hello, %s!\n" "World"
+          Output: Hello, World!
+
+       2. Print a character:
+          $ printf "Character: %c\n" "A"
+          Output: Character: A
+
+       3. Print an integer:
+          $ printf "Integer: %d\n" 42
+          Output: Integer: 42
+
+       4. Print a percentage symbol:
+          $ printf "Percentage: %%\n"
+          Output: Percentage: %
+
+       5. Print multiple values:
+          $ printf "Name: %s, Age: %d\n" "Alice" 30
+          Output: Name: Alice, Age: 30
