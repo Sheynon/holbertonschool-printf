@@ -31,4 +31,8 @@ This project is a custom implementation of the C standard `printf` function. It 
 The project is compiled using:
 ```sh
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+```
 
+#### Flowchart
+
+![Flowchart](./flowchart.png)
